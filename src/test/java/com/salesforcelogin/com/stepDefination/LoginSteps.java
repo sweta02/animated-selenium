@@ -20,21 +20,21 @@ public class LoginSteps {
     private HomePage homePage = new HomePage();
 
     @Given("^User is already on login page$")
-    public void user_is_already_on_login_page() throws Throwable {
+    public void user_is_already_on_login_page()  {
         String actual = homePage.getCurrentUrl();
-        throw new PendingException();
-    }
-    @When("^title is title$")
-    public void title_is_title() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-    @Then("^title is fighter$")
-    public void title_is_fighter() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+
     }
 
+    @When("^user enters username and password$")
+    public void user_enters_username_and_password() {
+
+    }
+
+    @Then("^user is on homepage$")
+    public void user_is_on_homepage() {
+
+    }
+    
     //@When("^title of login is Salesforce$")
     //public void title_of_login_is_Salesforce() throws Throwable {
        // String title = driver.getTitle();

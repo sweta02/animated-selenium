@@ -7,6 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class DriverManager {
+
     public static WebDriver driver ;
     private String browser = "";
     public void openBrowser(){
@@ -25,11 +26,12 @@ public class DriverManager {
                 break;
         }
     }
-    public void navigateTo(String url){
-        driver.get(url);}
-
+    public void navigateTo(String url){ driver.get(url);}
     public void maxibrowser() {
         driver.manage().window().maximize();
+    }
+    public void applyImplicitWaits(){
+
     }
     public void closeBrowser(){
         driver.quit();

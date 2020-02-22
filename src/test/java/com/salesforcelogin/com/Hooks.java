@@ -1,17 +1,18 @@
 package com.salesforcelogin.com;
 
 import com.salesforcelogin.com.driver.DriverManager;
-import org.junit.After;
-import org.junit.Before;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 
 public class Hooks{
-DriverManager manager = new DriverManager();
+private DriverManager manager = new DriverManager();
 
 @Before
     public void setUp(){
     manager.openBrowser();
-    manager.navigateTo("https://login.salesforce.com/");
     manager.maxibrowser();
+    manager.navigateTo("https://www.argos.co.uk/");
+    manager.applyImplicitWaits();
 
 }
 @After

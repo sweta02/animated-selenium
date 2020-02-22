@@ -9,11 +9,11 @@ public class LoginPage extends DriverManager {
         driver.findElement(By.id("username")).sendKeys("swetapatel");
         driver.findElement(By.id("password")).sendKeys("ahghdghfg");
         driver.findElement(By.id("Login")).click();
-
     }
 
     public String getLoginDetails() {
-        return "";
+        return driver.findElement(By.id("error")).getText();
+
     }
 
 }

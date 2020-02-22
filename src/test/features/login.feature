@@ -5,5 +5,6 @@ Feature: Login
 
   Scenario: Login Test Scenario
     Given User is already on login page
-    When title is title
-    Then title is fighter
+    When user enters username and password
+    Then user is on homepage
+

@@ -11,9 +11,10 @@ import java.sql.Driver;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-public class SmokeTestSuit extends Hooks{
+public class SmokeTestSuit{
 
     private HomePage homePage = new HomePage();
+    private LoginPage loginPage = new LoginPage();
 
     @Test
     public void loginTest(){
