@@ -13,18 +13,18 @@ import static org.hamcrest.Matchers.*;
 
 public class SmokeTestSuit{
 
-    private HomePage homePage = new HomePage();
-    private LoginPage loginPage = new LoginPage();
+   // private HomePage homePage = new HomePage();
+    //private LoginPage loginPage = new LoginPage();
 
-    @Test
-    public void loginTest(){
-        String title = homePage.getTitle();
-        assertThat(title, is(equalToIgnoringCase("Login | Salesforce")));
-    }
+    //@Test
+   // public void loginTest(){
+        //String title = homePage.getTitle();
+        //assertThat(title, is(equalToIgnoringCase("Login | Salesforce")));
+    //}
 
-    @Test
-    public void getCurrentUrlTest(){
-        String url = homePage.getCurrentUrl();
-        assertThat(url,is(equalToIgnoringCase("https://login.salesforce.com/")));
-    }
+    //@Test
+    //public void getCurrentUrlTest(){
+      //  String url = homePage.getCurrentUrl();
+        //assertThat(url,is(equalToIgnoringCase("https://login.salesforce.com/")));
+   // }
 }

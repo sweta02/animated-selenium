@@ -10,7 +10,7 @@ private DriverManager manager = new DriverManager();
 @Before
     public void setUp(){
     manager.openBrowser();
-    manager.maxibrowser();
+    manager.maxbrowser();
     manager.navigateTo("https://www.argos.co.uk/");
     manager.applyImplicitWaits();
 

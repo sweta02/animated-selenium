@@ -17,24 +17,23 @@ import static org.hamcrest.Matchers.equalToIgnoringCase;
 
 public class LoginSteps {
 
-    private HomePage homePage = new HomePage();
+    //private HomePage homePage = new HomePage();
 
-    @Given("^User is already on login page$")
-    public void user_is_already_on_login_page()  {
-        String actual = homePage.getCurrentUrl();
+    //@Given("^User is already on login page$")
+    //public void user_is_already_on_login_page()  {
+      //  String actual = homePage.getCurrentUrl();
+    //}
 
-    }
+    //@When("^user enters username and password$")
+    //public void user_enters_username_and_password() {
 
-    @When("^user enters username and password$")
-    public void user_enters_username_and_password() {
+    //}
 
-    }
+    //@Then("^user is on homepage$")
+    //public void user_is_on_homepage() {
 
-    @Then("^user is on homepage$")
-    public void user_is_on_homepage() {
+    //}
 
-    }
-    
     //@When("^title of login is Salesforce$")
     //public void title_of_login_is_Salesforce() throws Throwable {
        // String title = driver.getTitle();
