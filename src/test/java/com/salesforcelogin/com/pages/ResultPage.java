@@ -19,7 +19,7 @@ public class ResultPage extends DriverManager {
     @FindBy(css = "div[data-test=\"component-ratings\"]")
     private List<WebElement> ratingStars;
 
-    @FindBy(css = "label[name=\"price\"]")
+    @FindBy(css = ".Checkboxstyles__Square-e3lxpy-8.ipdoeh")
     private List<WebElement> priceSelect;
 
     @FindBy(css = "label[name=\"brands\"]")
@@ -48,33 +48,29 @@ public class ResultPage extends DriverManager {
         return ratingList;
     }
 
-    public void selectPrice(Integer priceOption) {
-        new WebDriverWait(driver, 10)
-                .until(ExpectedConditions.numberOfElementsToBeMoreThan(By.cssSelector("label[name=\"price\"]"), 3));
+    public void selectPrice(String priceOption) {
+        //new WebDriverWait(driver, 10)
+          //      .until(ExpectedConditions.numberOfElementsToBeMoreThan(By.cssSelector("label[name=\"price\"]"), 3));
         for (WebElement price : priceSelect) {
-            // int priceFilter = Integer.parseInt(price.getCssValue("4"));
-           // if (priceFilter("<£20 && >£25")) ;
-           // price.click();
-            //break;
+             String priceFilter = price.getText();
+            if (priceFilter.equalsIgnoreCase(priceOption)){
+            price.click();
+            break;
+            }
         }
     }
-    //public boolean priceFilter(String s) {
-      //  priceFilter("true");
-      //  return true;
-    //}
-    public void selectBrand(String Tefal){
+    public void selectBrand(String brandOption){
         new WebDriverWait(driver,20)
                 .until(ExpectedConditions.numberOfElementsToBeMoreThan(By.cssSelector("label[name=\"brands\"]"),3));
         for(WebElement brand :brandWebElement){
             String availableBrand = brand.getText();
-            if(availableBrand.matches(Tefal)){
-                //brand.findElements(By.cssSelector("label[id=\"filter-brands-tefal-label\"]"));
+            if(availableBrand.matches(brandOption)){
                 brand.click();
                 break;
             }
 
         }
-}
+    }
 
 }
 
